@@ -1,0 +1,13 @@
+/* Critical CSS for ARCANA.VISION — inlined for FCP optimization */
+:root{--void:#0a0a0f;--ink:#070710;--bone:#f5efe0;--bone-dim:#f5efe099;--matrix:#00ffa3;--font-display:var(--font-cormorant),Georgia,serif;--font-mono:var(--font-mono),ui-monospace,monospace;}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
+body{background:var(--void);color:var(--bone);font-family:var(--font-mono);line-height:1.55;overflow-x:hidden;cursor:none;}
+::selection{background:var(--matrix);color:var(--void);}
+.letterbox{position:fixed;left:0;right:0;height:58px;background:var(--ink);z-index:100;pointer-events:none;border-color:var(--bone-dim);border-style:solid;border-width:0;}
+.letterbox.top{top:0;border-bottom-width:1px;}
+.letterbox.bottom{bottom:0;border-top-width:1px;}
+.btn-arcana{display:inline-flex;align-items:center;gap:12px;padding:18px 32px;font-family:var(--font-mono);font-size:12px;letter-spacing:0.28em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(245,239,224,0.18);color:var(--bone-dim);background:transparent;transition:all 0.4s cubic-bezier(0.22,1,0.36,1);cursor:pointer;}
+.btn-arcana:hover{border-color:var(--matrix);color:var(--matrix);box-shadow:0 0 24px rgba(0,255,163,0.12);}
+.btn-arcana.primary{background:var(--bone);color:var(--void);border-color:var(--bone);}
+.btn-arcana.primary:hover{background:var(--matrix);border-color:var(--matrix);color:var(--void);}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;scroll-behavior:auto!important;}}

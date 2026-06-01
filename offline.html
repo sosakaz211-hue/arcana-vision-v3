@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARCANA &mdash; Offline</title>
+  <style>
+    :root { --void: #0a0a0f; --bone: #f5efe0; --matrix: #00ffa3; --blood: #ff0040; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--void); color: var(--bone);
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      min-height: 100vh; text-align: center; padding: 2rem;
+    }
+    h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2rem, 5vw, 4rem); font-style: italic; margin-bottom: 1rem; }
+    .status { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blood); margin-bottom: 2rem; }
+    p { color: rgba(245,239,224,0.6); line-height: 1.7; max-width: 480px; margin-bottom: 2rem; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 12px; padding: 14px 28px;
+      font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; text-decoration: none;
+      border: 1px solid rgba(245,239,224,0.18); color: var(--bone); background: transparent;
+      transition: all 0.4s cubic-bezier(0.22,1,0.36,1); cursor: pointer;
+    }
+    .btn:hover { border-color: var(--matrix); color: var(--matrix); box-shadow: 0 0 24px rgba(0,255,163,0.12); }
+    .glitch { animation: glitch 2s infinite; }
+    @keyframes glitch {
+      0%,100% { opacity: 1; }
+      92% { opacity: 1; transform: none; }
+      93% { opacity: 0.8; transform: translateX(2px); }
+      94% { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="status">System Offline // Connection Lost</div>
+  <h1 class="glitch">The pattern is waiting.</h1>
+  <p>You are offline. The arcana cannot be read without a connection to the network. Return when the signal is restored.</p>
+  <button onclick="location.reload()" class="btn">Retry Connection</button>
+</body>
+</html>
